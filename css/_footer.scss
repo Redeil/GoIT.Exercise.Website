@@ -1,0 +1,36 @@
+@use 'base';
+
+.footer {
+    max-width:1200px;
+    margin:auto;
+    border-top: 1px solid base.$color-light-border-gray; 
+    display:flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    &__copyright {
+        @include base.small-heading-text;
+        text-transform: none;
+    }
+    &__email {
+        border: 1px solid base.$color-light-border-gray;
+        height: 36px;
+        margin-right:-5px;
+        width: 200px;
+        padding: 0 20px;
+    }
+    &__subscribe {
+        border:0;
+        background-color: base.$color-cyan;
+        @include base.small-heading-text;
+        color: base.$color-white;
+        font-weight: 700;
+        height:38px;
+        padding: 0 34px;
+        cursor:pointer;
+        transition: .3s background-color;
+        &:hover {
+            background-color: base.$color-red;
+        }
+    }
+}

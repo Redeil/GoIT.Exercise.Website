@@ -1,0 +1,46 @@
+$heading-font: 'Montserrat', sans-serif;
+$text-font: 'Roboto', sans-serif;
+$decorative-font: 'Kaushan Script', cursive;
+
+$color-white: #ffffff;
+$color-red: #f38181;
+$color-yellow: #fce38a;
+$color-light-yellow: #eaffd0;
+$color-cyan: #95e1d3; 
+$color-gray: #333333;
+$color-light-gray: #999999;
+$color-light-border-gray: #dddddd;
+
+@mixin no-margin-padding {
+    margin:0;
+    padding:0;
+}
+
+@mixin heading-text {
+    font-family: $heading-font;
+    text-transform: uppercase;
+}
+
+@mixin small-heading-text {
+    @include heading-text;
+    font-size:14px;
+}
+
+@mixin small-description-text {
+    font-family: $text-font;
+    font-size: 15px;
+    color: $color-light-gray;
+}
+
+@mixin absolute-full {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+body {
+    @include no-margin-padding;
+}
+
